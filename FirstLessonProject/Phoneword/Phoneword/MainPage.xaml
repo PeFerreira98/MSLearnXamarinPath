@@ -5,14 +5,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Padding="20"
     mc:Ignorable="d">
-
-    <StackLayout>
-        <!--  Place new controls here  -->
-        <Label
-            HorizontalOptions="Center"
-            Text="Welcome to MS learn achievement hunting"
-            VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
+    <ContentPage.Content>
+        <StackLayout Spacing="15">
+            <Label Text="Enter a Phoneword:" />
+            <Entry Text="{Binding EnteredNumber}" />
+            <Button Clicked="Button_Clicked" Text="Translate" />
+            <Button IsEnabled="{Binding IsButtonEnabled}" Text="{Binding ButtonTextCall}" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
